@@ -6,11 +6,15 @@ package com.geniusmart.module2;
 public class Client {
 
     public static void main(String[] args){
-        GirlFriendModule girlFriendModule = new GirlFriendModule("气质美女风格");
-        BoyComponent build = DaggerBoyComponent.builder().girlFriendModule(girlFriendModule).build();
+
+        //通过上下文环境取得该值，如从数据中获取或者业务处理后获取
+        String decorate = "青春靓丽";
+        GirlFriendModule girlFriendModule = new GirlFriendModule(decorate);
+        //设置Module对象
+        BoyComponent build = DaggerBoyComponent.builder()
+                .girlFriendModule(girlFriendModule).build();
         Boy boy = build.inject();
         boy.daydayup();
-
         boy.today();
     }
 }

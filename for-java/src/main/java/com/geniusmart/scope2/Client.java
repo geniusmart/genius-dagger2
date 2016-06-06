@@ -6,7 +6,8 @@ package com.geniusmart.scope2;
 public class Client {
 
     public static void main(String[] args){
-        MainConponent build = DaggerMainConponent.builder().mainModule(new MainModule()).build();
+        MainConponent build = DaggerMainConponent.builder().
+                mainModule(new MainModule()).build();
         GirlFriend girlFriend1 = build.inject();
         GirlFriend girlFriend2 = build.inject();
         girlFriend1.who();

@@ -7,14 +7,11 @@ import javax.inject.Inject;
  */
 public class GirlFriend {
 
-    private String mDecorate;
-
     @Inject
-    public GirlFriend(String decorate) {
-        mDecorate = decorate;
+    public GirlFriend() {
     }
 
     public void laugh() {
-        System.out.println(mDecorate + "--laughing girl");
+        System.out.println("laughing girl");
     }
 }

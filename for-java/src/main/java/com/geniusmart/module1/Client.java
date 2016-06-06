@@ -7,7 +7,7 @@ public class Client {
 
     public static void main(String[] args){
         BoyComponent build = DaggerBoyComponent.builder().build();
-        com.geniusmart.module1.Boy boy = build.inject();
-        boy.daydayup();
+        Boy boy = build.inject();
+        boy.today();
     }
 }

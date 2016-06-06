@@ -7,7 +7,6 @@ import javax.inject.Inject;
  */
 public class Boy {
 
-
     @Inject
     public Boy(){
 
