@@ -9,5 +9,7 @@ public class Client {
         BoyComponent build = DaggerBoyComponent.builder().build();
         Boy boy = build.inject();
         boy.daydayup();
+
+        build.injectOtherBoy().daydayup();
     }
 }

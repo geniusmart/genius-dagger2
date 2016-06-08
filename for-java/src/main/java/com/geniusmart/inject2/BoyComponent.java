@@ -8,4 +8,5 @@ import dagger.Component;
 @Component
 public interface BoyComponent {
     Boy inject();
+    OtherBoy injectOtherBoy();
 }
