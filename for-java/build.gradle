@@ -2,7 +2,6 @@ apply plugin: 'java'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    //TODO 以下两个依赖描述下
     compile "com.google.dagger:dagger:2.2"
     compile "com.google.dagger:dagger-compiler:2.2"
 }
