@@ -13,7 +13,7 @@ public class MainModule {
 
     @Singleton
     @Provides
-    public GirlFriend newInstance(){
+    public GirlFriend provideGF(){
         return new GirlFriend();
     }
 }

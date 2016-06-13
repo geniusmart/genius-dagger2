@@ -6,7 +6,10 @@ package com.geniusmart.scope2;
 public class ClientInvalid {
 
     public static void main(String[] args){
-        MainConponent build1 = DaggerMainConponent.builder().mainModule(new MainModule()).build();
+
+        MainModule mainModule = new MainModule();
+
+        MainConponent build1 = DaggerMainConponent.builder().mainModule(mainModule).build();
         GirlFriend girlFriend1 = build1.inject();
         GirlFriend girlFriend2 = build1.inject();
         girlFriend1.who();
@@ -16,7 +19,7 @@ public class ClientInvalid {
         boy.myGirlFriend();
 
         //此时的GirlFriend的单例失效了
-        MainConponent build2 = DaggerMainConponent.builder().mainModule(new MainModule()).build();
+        MainConponent build2 = DaggerMainConponent.builder().mainModule(mainModule).build();
         GirlFriend girlFriend3 = build2.inject();
         girlFriend3.who();
 
